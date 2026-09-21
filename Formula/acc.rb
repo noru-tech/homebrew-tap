@@ -1,25 +1,25 @@
 class Acc < Formula
   desc "Deterministic change control for software written with coding agents"
   homepage "https://github.com/noru-tech/agent-change-control"
-  version "0.3.1"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.3.1/agent-change-control-aarch64-apple-darwin.tar.xz"
-      sha256 "6ead2f78d4ff034615be3fcf7d7882ac01378739b13dd7c0dc38018bb0f23da9"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.4.0/agent-change-control-aarch64-apple-darwin.tar.xz"
+      sha256 "93ca45795822861a5a1744cf828f7a8700cf82e29480ce7ad3f73348c2a01567"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.3.1/agent-change-control-x86_64-apple-darwin.tar.xz"
-      sha256 "6737532987e662cfbe886b6c7f1bcd75eb6ab027e3eff8e6cdca3e168bef8684"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.4.0/agent-change-control-x86_64-apple-darwin.tar.xz"
+      sha256 "c9ad85e8366212876eaddf899b3b9fa5f06666a0f55fd9e09f647764a2fdd63c"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.3.1/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "a8bbc0b6435e9a5d3f69a62da77ff94b1d3e23757b0a70d8b7ec2cc3a2a8bac7"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.4.0/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "f79019a9dfcc6cfdd9ece6e32b7ae51973f7bf135ba989c859283a2183217e2b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.3.1/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "2cc11c2c135da16df4884df51aa628d964385c554e39f9a18c7f4f43966b1fcf"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.4.0/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "a267f71a61f5e25138f4c646b47bec8a2874126d2afdf69e304c26ef96736590"
     end
   end
   license "MIT"
