@@ -13,7 +13,7 @@ Both work on macOS (Apple Silicon and Intel) and Linux (x86_64 and arm64).
 
 | Formula | Install | What it is | Source |
 | --- | --- | --- | --- |
-| `acc` | `brew install noru-tech/tap/acc` | Deterministic change control for code written by AI coding agents. Records who authored, operated, reviewed and merged each change, with in-toto attestations. | [noru-tech/agent-change-control](https://github.com/noru-tech/agent-change-control) |
+| `acc` | `brew install noru-tech/tap/acc` | Deterministic change control for code written by AI coding agents. Checks each change for independent human approval and emits SARIF and in-toto statements. | [noru-tech/agent-change-control](https://github.com/noru-tech/agent-change-control) |
 | `fl` | `brew install noru-tech/tap/fl` | Rust CLI for Fideslang privacy taxonomies and Fides manifests. Browse, validate, merge, convert and graph data maps offline. | [noru-tech/fideslang-tools](https://github.com/noru-tech/fideslang-tools) |
 
 ## How the formulas are built
