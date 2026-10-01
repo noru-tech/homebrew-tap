@@ -1,25 +1,25 @@
 class Acc < Formula
   desc "Deterministic change control for code written by AI coding agents. Checks each change for independent human approval and emits SARIF and in-toto statements."
   homepage "https://github.com/noru-tech/agent-change-control"
-  version "0.5.3"
+  version "0.5.4"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.3/agent-change-control-aarch64-apple-darwin.tar.xz"
-      sha256 "f6fcfdb768614b09b22acca728606e55d96115e8e8173b5dcff63941ea259fbd"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-aarch64-apple-darwin.tar.xz"
+      sha256 "991b62ce2a86154acd952f54ec7501a72397e4342e54757270cd6c051549c3a8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.3/agent-change-control-x86_64-apple-darwin.tar.xz"
-      sha256 "969b784e55f979190bd9462c99cf4cf95d8d1125e4c318acfd5c8f3706217ead"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-x86_64-apple-darwin.tar.xz"
+      sha256 "672b46bc7d4e863077b9384650496921ebecb2a86cd7b4a378bebe7c1e762c68"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.3/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "1fcaf40c0587781187fb913087fa0758b72362be6b30a3a006f484250903481e"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "f85ee2c8bb645a710ac148583112cea880f9e948966668f68c7678e907e1d2a9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.3/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "dba0af87c01229af77d99a1a474828c3c5e54a1ae932e76c19bf648e11e1b257"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "0739d290f862d03ea56595280252a6f3ee7b4a5fdea1ca4d055deebc0e3297c9"
     end
   end
   license "MIT"
