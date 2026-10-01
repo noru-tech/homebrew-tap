@@ -1,25 +1,25 @@
 class Acc < Formula
   desc "Deterministic change control for code written by AI coding agents. Checks each change for independent human approval and emits SARIF and in-toto statements."
   homepage "https://github.com/noru-tech/agent-change-control"
-  version "0.5.4"
+  version "0.6.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-aarch64-apple-darwin.tar.xz"
-      sha256 "991b62ce2a86154acd952f54ec7501a72397e4342e54757270cd6c051549c3a8"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.6.0/agent-change-control-aarch64-apple-darwin.tar.xz"
+      sha256 "da8b1e135f684cf2395e1f479706faf03d18a07c7d25c6f95a37a4f5b5be8790"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-x86_64-apple-darwin.tar.xz"
-      sha256 "672b46bc7d4e863077b9384650496921ebecb2a86cd7b4a378bebe7c1e762c68"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.6.0/agent-change-control-x86_64-apple-darwin.tar.xz"
+      sha256 "df19be039db13f2a1852bfe7b5bcc24db476099d1d3a90a06042c604110529a6"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "f85ee2c8bb645a710ac148583112cea880f9e948966668f68c7678e907e1d2a9"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.6.0/agent-change-control-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "91a86d8dc8f0cc06646fb048f1e76620b7b617edc1a86cdb48299905998bb9cd"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.5.4/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "0739d290f862d03ea56595280252a6f3ee7b4a5fdea1ca4d055deebc0e3297c9"
+      url "https://github.com/noru-tech/agent-change-control/releases/download/v0.6.0/agent-change-control-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "214c06838307647d89de039bfa1ab7645eac92d24f0d00d42022d85296e72f42"
     end
   end
   license "MIT"
@@ -65,6 +65,10 @@ class Acc < Formula
     end
 
     install_binary_aliases!
+    bash_completion.install "completions/acc.bash" => "acc"
+    zsh_completion.install "completions/_acc"
+    fish_completion.install "completions/acc.fish"
+    man1.install Dir["man/*.1"]
 
     # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
