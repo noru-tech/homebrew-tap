@@ -1,25 +1,25 @@
 class Fl < Formula
   desc "Rust CLI for Fideslang privacy taxonomies and Fides manifests. Browse, validate, merge, convert and graph data maps offline."
   homepage "https://github.com/noru-tech/fideslang-tools"
-  version "0.1.3"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "52c033946fbb6a71d0fc14f2e517ba77448b69146f3f19dbec1137314fa7d51c"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.2.0/fideslang-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "45f42b87b5554ed87cbc19c351c4f2b269e64f673a9897b3c537e301019e93e8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "75aa862f4176d3fe0b2290b083de82e1b43b0e95a17d9b3cda80f008d5c1e1b3"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.2.0/fideslang-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "324d6ddcd40629b1a052b145fc819b78eac1a35184946d960e4831a04b82e978"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "140cbd32a70d0e1c94116da7ef57dd0e762a8529d76e5c4b124994c849b1a6e0"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.2.0/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "a597420ee8d064622fc052429c315f100aa374adce7d5d2a0cab939e5580d230"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "b9bb9653e1120be1649fb54e390d9110b9d8a9e7e7c8d062c14155025b6687f0"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.2.0/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "b49bce1904465f096e0451e7e692d81151068cd5b00950a50bbd63cb8739e24b"
     end
   end
   license "MIT"
@@ -65,6 +65,14 @@ class Fl < Formula
     end
 
     install_binary_aliases!
+
+    # Shell completions and man pages from the archive (added by fideslang-tools'
+    # scripts/homebrew-formula-extras.sh).
+    bash_completion.install "completions/fl.bash" => "fl"
+    zsh_completion.install "completions/_fl"
+    fish_completion.install "completions/fl.fish"
+    man1.install Dir["man/*.1"]
+    rm_r %w[completions man]
 
     # Homebrew will automatically install these, so we don't need to do that
     doc_files = Dir["README.*", "readme.*", "LICENSE", "LICENSE.*", "CHANGELOG.*"]
