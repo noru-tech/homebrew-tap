@@ -1,25 +1,25 @@
 class Fl < Formula
-  desc "fl — a command-line toolbox for Fideslang privacy taxonomies and Fides manifests: browse, visualize, convert, merge, validate"
+  desc "Rust CLI for Fideslang privacy taxonomies and Fides manifests. Browse, validate, merge, convert and graph data maps offline."
   homepage "https://github.com/noru-tech/fideslang-tools"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.1/fideslang-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "7c73eb53f713e7d13ff38ff143bdf8cb6a7d48db78739ebe92b2d251eb7899d1"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "e0be582e28924192220438280a01d863368bda952b9b69411bab12a99490ee65"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.1/fideslang-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "1f84b842b913349ea187b6068fe04fefa0d16e62d4cf4b9f4788b19f5393e1a2"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "9f4f4206a295deed350360479383e72e8e587a95c25e65dfb9c78446a920181a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.1/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "0612e0c160503fef3b485bd9dccfe09bf0582297254554e8f254a1d590e58e56"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "85e23c81ccf9db1d8d28ad57c2ab5f1d1da8b1c801354cad94eed5b694d3632e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.1/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "1252c5026ee2613099712818a6b357087bc71aae917ffc26916fdf0e07b13346"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "cf7d7fd7edc5e4c4d94c4268042561472bc2205b6545759d608280682a73b203"
     end
   end
   license "MIT"
