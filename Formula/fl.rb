@@ -1,25 +1,25 @@
 class Fl < Formula
   desc "Rust CLI for Fideslang privacy taxonomies and Fides manifests. Browse, validate, merge, convert and graph data maps offline."
   homepage "https://github.com/noru-tech/fideslang-tools"
-  version "0.1.2"
+  version "0.1.3"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "e0be582e28924192220438280a01d863368bda952b9b69411bab12a99490ee65"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "52c033946fbb6a71d0fc14f2e517ba77448b69146f3f19dbec1137314fa7d51c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "9f4f4206a295deed350360479383e72e8e587a95c25e65dfb9c78446a920181a"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "75aa862f4176d3fe0b2290b083de82e1b43b0e95a17d9b3cda80f008d5c1e1b3"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "85e23c81ccf9db1d8d28ad57c2ab5f1d1da8b1c801354cad94eed5b694d3632e"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "140cbd32a70d0e1c94116da7ef57dd0e762a8529d76e5c4b124994c849b1a6e0"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.2/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "cf7d7fd7edc5e4c4d94c4268042561472bc2205b6545759d608280682a73b203"
+      url "https://github.com/noru-tech/fideslang-tools/releases/download/v0.1.3/fideslang-cli-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "b9bb9653e1120be1649fb54e390d9110b9d8a9e7e7c8d062c14155025b6687f0"
     end
   end
   license "MIT"
