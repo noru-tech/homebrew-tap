@@ -1,25 +1,25 @@
 class Piiflow < Formula
   desc "Deterministic, offline static analysis of where personal data goes: logs, third-party SDKs, LLM providers and outbound HTTP. Cited file:line flow paths, SARIF, canonical JSON and Fides egress."
   homepage "https://github.com/noru-tech/privacy-flow"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.2.0/privacy-flow-aarch64-apple-darwin.tar.xz"
-      sha256 "5d82fc02c9e6ad4696db87c62e2c67c3302db9b72007b4c8c872518d9e0c245b"
+      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.3.0/privacy-flow-aarch64-apple-darwin.tar.xz"
+      sha256 "06ede2222b0dc2fe4ca4af185a7b4a073e2975318e1b5319b49078bc441026d7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.2.0/privacy-flow-x86_64-apple-darwin.tar.xz"
-      sha256 "667d0264374835f5cdd4a3b342d4095115226db8db1065951c79d7a9ee27b353"
+      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.3.0/privacy-flow-x86_64-apple-darwin.tar.xz"
+      sha256 "b196954ebdd7af1ac22fc39e2f6c102b02ec90b22fbac65161a99c700c8305d5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.2.0/privacy-flow-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "1c90b2da233cbd69739515d12b8d1ee63fc42b89fb20ef03421fc345a8e70039"
+      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.3.0/privacy-flow-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "831bd860b5c769d0e7de9f813adcea7e5e12be949e55a6e04164cce2e2a52fe1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.2.0/privacy-flow-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "8ace8b28c35b0fdc5e5d60b0cf96396a0cb1434cf6e3f1017c60ea29aeb49321"
+      url "https://github.com/noru-tech/privacy-flow/releases/download/v0.3.0/privacy-flow-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "bbacc7be9b14abd6ca7dd172e555ba4e56c7f60c564bf9ab49b82064225dd531"
     end
   end
   license "MIT"
