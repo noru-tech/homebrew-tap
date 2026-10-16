@@ -1,5 +1,5 @@
 class Crisk < Formula
-  desc "Deterministic change risk tiers from changed paths, a sensitivity map and declared facts, as an in-toto predicate"
+  desc "Deterministic change risk tiers from changed paths, a sensitivity map and declared facts, as an in-toto predicate."
   homepage "https://github.com/noru-tech/change-risk"
   version "0.1.0"
   if OS.mac?
