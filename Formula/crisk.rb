@@ -1,25 +1,25 @@
 class Crisk < Formula
   desc "Deterministic change risk tiers from changed paths, a sensitivity map and declared facts, as an in-toto predicate."
   homepage "https://github.com/noru-tech/change-risk"
-  version "0.1.0"
+  version "0.2.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/change-risk/releases/download/v0.1.0/change-risk-aarch64-apple-darwin.tar.xz"
-      sha256 "1904397ad1308eab7eac191ca302cc31a4588e64e47a6fd36ef680fac2a0bda7"
+      url "https://github.com/noru-tech/change-risk/releases/download/v0.2.0/change-risk-aarch64-apple-darwin.tar.xz"
+      sha256 "b5569fa9f041675f4f04cc61cac48782d730016e037ab66053d44ccdb53bd6c7"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/change-risk/releases/download/v0.1.0/change-risk-x86_64-apple-darwin.tar.xz"
-      sha256 "a441af03ffdedbcededb6f8d2a1ce69846850e2a88be05fc9ff41298fc4267ca"
+      url "https://github.com/noru-tech/change-risk/releases/download/v0.2.0/change-risk-x86_64-apple-darwin.tar.xz"
+      sha256 "795afdb1be50f1bb34b31292902ff906e26a76f93bde03a0f193c786a70e5a95"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/noru-tech/change-risk/releases/download/v0.1.0/change-risk-aarch64-unknown-linux-musl.tar.xz"
-      sha256 "f976abcfe6f211e2f66b8c65a0fdf054938823ce6324632074af6eddfd783283"
+      url "https://github.com/noru-tech/change-risk/releases/download/v0.2.0/change-risk-aarch64-unknown-linux-musl.tar.xz"
+      sha256 "13e12b3c93019ed1d27e52085c38ec0e9f5fcc2ab3619d3bc8d2bc3436f63fc9"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/noru-tech/change-risk/releases/download/v0.1.0/change-risk-x86_64-unknown-linux-musl.tar.xz"
-      sha256 "04f527b7f0ff71d7d9a0183f590dcc646191890e912cbc840c97bf3c9bcda926"
+      url "https://github.com/noru-tech/change-risk/releases/download/v0.2.0/change-risk-x86_64-unknown-linux-musl.tar.xz"
+      sha256 "9c5cfc03beec0b6f1d550ec446231a651ecec6cbbfcc5d25fc4191a1d4562827"
     end
   end
   license "MIT"
